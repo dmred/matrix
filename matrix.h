@@ -255,7 +255,7 @@ void matrix::create_memory()
 
 
 // перегрузка оператора [] 
-int* matrix::operator [] (int i)
+int* matrix::operator [] (int i) const
 {
 	int *Getline = new int[columns];// одномерный массив для хранения столбцов
 	for (int j = 0; j < columns; j++)
