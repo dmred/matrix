@@ -116,7 +116,7 @@ matrix::~matrix()
 
 
 // печать матрицы
-void matrix::print_matrix() 
+void matrix::print_matrix() const
 {
 	for (int i = 0; i < rows; i++) {
 		for (int j = 0; j < columns; j++) {
@@ -213,7 +213,7 @@ matrix operator*(const matrix &matrix_1, const matrix &matrix_2) {
 };
 
 // количество строк
-int matrix::get_num_rows() 
+int matrix::get_num_rows() const
 {
 	return rows;
 }
@@ -237,7 +237,7 @@ void matrix::get_multi_r(const matrix &matrix_1, const matrix &matrix_2, int i)
 
 
 //Количество столбцов
-int matrix::get_num_cols()
+int matrix::get_num_cols() const
 {
 	return columns;
 }
