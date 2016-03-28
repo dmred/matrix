@@ -17,17 +17,17 @@ class matrix
 	~matrix();
 	void get_line(int k);
 	void get_from_file(string _name);
-	void print_matrix();
+	void print_matrix() const;
 	void copy_matrix(const matrix &Matrix);
 	matrix &operator=(const matrix &Matrix);
    friend matrix operator+(const matrix &matrix_1, const matrix &matrix_2);
    friend matrix operator*(const matrix &matrix_1, const matrix &matrix_2);
-   int *operator[] (int i);
+   int *operator[] (int i) const;
    void get_sum_r(const matrix &matrix_1, const matrix &matrix_2, int s);
    void get_multi_r(const matrix &matrix_1, const matrix &matrix_2, int m);
    void create_memory();
-   int get_num_rows();
-   int get_num_cols();
+   int get_num_rows() const;
+   int get_num_cols() const;
 	int get(int rows, int columns) const;
 	void set(int row, int columns, int set);
 
